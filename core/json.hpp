@@ -7,6 +7,7 @@
 
 #include <string>
 #include <exception>
+#include <iostream>
 
 namespace stack_json
 {
@@ -14,7 +15,7 @@ namespace stack_json
 using size_t = std::size_t;
 using string = std::string;
 
-class enum type : uint8_t
+enum class type : uint8_t
 {
     object,
     array,
@@ -51,6 +52,8 @@ void parse(const char *buf, size_t beginOffset, size_t endOffset);
 void parseElement(const char *buf, const char *begin, const char *end);
 void parseValue(const char *buf, const char *begin, const char *end);
 void parseObject(const char *buf, const char *begin, const char *end);
+void parseString(const char *buf, const char *begin, const char *end);
+void parseArray(const char *buf, const char *begin, const char *end);
 
 } // namespace parser
 } // namespace stack_json

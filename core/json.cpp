@@ -2,7 +2,9 @@
  * Author: daveying@163.com
  */
 
-#include "json.hpp"
+#include <json.hpp>
+#include <exception>
+#include <iostream>
 
 namespace stack_json
 {
@@ -58,6 +60,14 @@ static inline bool streq(const char *s1, const char *s2, size_t size)
     }
 
     return true;
+}
+
+void parseString(const char *buf, const char *begin, const char *end)
+{
+}
+
+void parseArray(const char *buf, const char *begin, const char *end)
+{
 }
 
 void parseValue(const char *buf, const char *begin, const char *end)
